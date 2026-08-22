@@ -1,0 +1,28 @@
+{
+  "name": "kafka-worker",
+  "version": "1.0.0",
+  "description": "Background Event Processor",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@genyuga/database": "*",
+    "@genyuga/shared-types": "*",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.1",
+    "kafkajs": "^2.2.4",
+    "knex": "^3.2.9",
+    "node-cron": "^4.2.1",
+    "pg": "^8.20.0",
+    "pino": "^10.3.1",
+    "pino-pretty": "^13.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

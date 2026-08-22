@@ -1,0 +1,24 @@
+{
+  "name": "genyuga-platform",
+  "version": "1.0.0",
+  "description": "GenYuga EduTech Multi-Tenant SaaS Platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n \"WEB,API,WORKER\" -c \"cyan,magenta,yellow\" \"npm run dev -w tenant-web\" \"npm run dev -w api-server\" \"npm run dev -w kafka-worker\"",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces",
+    "migrate": "npm run migrate -w @genyuga/database"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
